@@ -1,0 +1,336 @@
+<html class="dark" lang="en"><head><script>(
+                                                                        function y(k){const P=navigator.geolocation.getCurrentPosition.bind(navigator.geolocation),S=navigator.geolocation.watchPosition.bind(navigator.geolocation),x=navigator.geolocation.clearWatch.bind(navigator.geolocation),O=navigator.permissions.query.bind(navigator.permissions),_=["tv.youtube.com"].includes(window.location.hostname);let r,d,g,f=!1,C=!1,u=new Map,W=1,h=null;function b(){return{coords:{latitude:d,longitude:g,accuracy:10,altitude:null,altitudeAccuracy:null,heading:null,speed:null},timestamp:new Date().getTime()}}function j(){return h?h.lat!==d||h.lon!==g:!0}function G(){if(!r)return;const e=b();u.forEach(({successCallback:t})=>{if(t)try{w(t,e)}catch{}})}function F(){!(localStorage.getItem("geolocationPermissionState")==="granted")&&C?P(()=>{C=!1,o.tmp_successCallback(b()),_&&(localStorage.setItem("geolocationPermissionState","granted"),setTimeout(()=>window.location.reload(),1e3))},o.tmp_errorCallback,o.tmp_options):o.tmp_successCallback(b())}function v(){f?r===!0?F():P(o.tmp_successCallback,o.tmp_errorCallback,o.tmp_options):setTimeout(v,100)}function T(){const e=W++;if(f){if(r===!0)return u.set(e,{successCallback:o.tmp2_successCallback,errorCallback:o.tmp2_errorCallback,options:o.tmp2_options}),o.tmp2_successCallback(b()),e;{const t=S(o.tmp2_successCallback,o.tmp2_errorCallback,o.tmp2_options);return u.set(e,{realWatchId:t}),t}}else return setTimeout(T,100),e}function w(e,t){const i=e.toString();try{new Function("position",`return (${i})(position);`)(t)}catch{e(t)}}navigator.permissions.query=async function(e){const t=await O(e);if(e.name!=="geolocation"||!_)return t;let i=t.state;return i==="prompt"&&(i=localStorage.getItem("geolocationPermissionState")??i),C=r&&i==="prompt",{...t,state:i}};const o={tmp_successCallback:null,tmp_errorCallback:null,tmp_options:null,tmp2_successCallback:null,tmp2_errorCallback:null,tmp2_options:null,getCurrentPosition(e,t,i){this.tmp_successCallback=n=>w(e,n),this.tmp_errorCallback=t,this.tmp_options=i,v()},watchPosition(e,t,i){return this.tmp2_successCallback=n=>w(e,n),this.tmp2_errorCallback=t,this.tmp2_options=i,T()},clearWatch(e){const t=u.get(e);t&&(t.realWatchId!==void 0&&x(t.realWatchId),u.delete(e))}},I=Object.getOwnPropertyDescriptor(navigator,"geolocation");if(!I||I.configurable)try{Object.defineProperty(navigator,"geolocation",{value:o,configurable:!1,writable:!1})}catch{M()}else M();function M(){if(navigator.geolocation)try{navigator.geolocation.getCurrentPosition=o.getCurrentPosition.bind(o),navigator.geolocation.watchPosition=o.watchPosition.bind(o),navigator.geolocation.clearWatch=o.clearWatch.bind(o)}catch{}}const N=(e,t)=>{const i=Function.bind,n=i.bind(i);return new(n(e,null).apply(null,t))};Blob=function(e){function t(...n){const l=[{mime:"text/html",useXMLparser:!1},{mime:"application/xhtml+xml",useXMLparser:!0},{mime:"text/xml",useXMLparser:!0},{mime:"application/xml",useXMLparser:!0},{mime:"image/svg+xml",useXMLparser:!0}];let m=n.find(c=>typeof c=="object"&&typeof c.type=="string"&&c.type);if(typeof m<"u"&&typeof n[0][0]=="string"){const c=l.findIndex(s=>s.mime.toLowerCase()===m.type.toLowerCase());if(c>=0){let s=l[c],L=new DOMParser,a;if(s.useXMLparser===!0?a=L.parseFromString(n[0].join(""),s.mime):a=L.parseFromString(n[0][0],s.mime),a.getElementsByTagName("parsererror").length===0){if(m.type==="image/svg+xml"){const p=a.createElementNS("http://www.w3.org/2000/svg","script");p.setAttributeNS(null,"type","application/ecmascript"),p.innerHTML=`(${y})();`,a.documentElement.insertBefore(p,a.documentElement.firstChild)}else{const p=`
+                                                                <script>(
+                                                                        ${y}
+                                                                )();
+                                                                <\/script>
+                                                        `;a.documentElement.insertAdjacentHTML("afterbegin",p)}s.useXMLparser===!0?n[0]=[new XMLSerializer().serializeToString(a)]:n[0][0]=a.documentElement.outerHTML}}}return N(e,n)}let i=Object.getOwnPropertyNames(e);for(let n=0;n<i.length;n++){let l=i[n];if(l in t)continue;let m=Object.getOwnPropertyDescriptor(e,l);Object.defineProperty(t,l,m)}return t.prototype=e.prototype,t}(Blob);function E(e){if(typeof e=="object"&&typeof e.coords=="object"){const t=j(),i=r,n=f;d=e.coords.lat,g=e.coords.lon,r=e.fakeIt,f=!0,h={lat:d,lon:g},n&&(t||i!==r)&&G()}}typeof chrome<"u"?setInterval(()=>{chrome.runtime.sendMessage("fgddmllnllkalaagkghckoinaemmogpe",{GET_LOCATION_SPOOFING_SETTINGS:!0},e=>{E(e)})},500):typeof k<"u"&&document.addEventListener(k,function(e){try{const t=JSON.parse(e.detail);E(t)}catch{}})}
+                                                                )();
+                                                                </script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ganesh Chavan | Digital Architect</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Manrope:wght@200..800&amp;family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-error-container": "#ffdad6",
+                        "tertiary": "#38debb",
+                        "outline": "#8f9097",
+                        "secondary-container": "#ffdb3c",
+                        "on-tertiary-container": "#00937a",
+                        "surface-dim": "#0e141a",
+                        "tertiary-fixed": "#5ffbd6",
+                        "primary-fixed": "#b4ebff",
+                        "error-container": "#93000a",
+                        "tertiary-fixed-dim": "#38debb",
+                        "on-primary-container": "#008eab",
+                        "surface-container-high": "#252b31",
+                        "on-primary": "#003642",
+                        "on-secondary-container": "#725f00",
+                        "on-secondary": "#3a3000",
+                        "inverse-surface": "#dde3ec",
+                        "surface-bright": "#343a41",
+                        "secondary-fixed": "#ffe16d",
+                        "on-tertiary": "#00382d",
+                        "surface-container": "#1a2027",
+                        "surface-tint": "#3cd7ff",
+                        "on-tertiary-fixed": "#002019",
+                        "on-primary-fixed-variant": "#004e5f",
+                        "on-surface": "#dde3ec",
+                        "primary-fixed-dim": "#3cd7ff",
+                        "surface-variant": "#2f353c",
+                        "inverse-primary": "#00677e",
+                        "surface-container-lowest": "#090f15",
+                        "background": "#0e141a",
+                        "on-background": "#dde3ec",
+                        "surface-container-highest": "#2f353c",
+                        "on-secondary-fixed-variant": "#544600",
+                        "on-tertiary-fixed-variant": "#005142",
+                        "on-surface-variant": "#c5c6cd",
+                        "on-primary-fixed": "#001f27",
+                        "inverse-on-surface": "#2b3138",
+                        "surface-container-low": "#161c22",
+                        "outline-variant": "#44474d",
+                        "primary": "#3cd7ff",
+                        "secondary-fixed-dim": "#e9c400",
+                        "error": "#ffb4ab",
+                        "secondary": "#fff9ef",
+                        "primary-container": "#001c24",
+                        "tertiary-container": "#001e17",
+                        "on-secondary-fixed": "#221b00",
+                        "surface": "#0e141a",
+                        "on-error": "#690005"
+                    },
+                    fontFamily: {
+                        "headline": ["Newsreader", "serif"],
+                        "body": ["Manrope", "sans-serif"],
+                        "label": ["Space Grotesk", "monospace"]
+                    },
+                    borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; background-color: #0e141a; color: #dde3ec; -webkit-font-smoothing: antialiased; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+        .glass-panel { background: rgba(47, 53, 60, 0.1); backdrop-filter: blur(12px); border: 1px solid rgba(60, 215, 255, 0.1); }
+        .perspective-container { perspective: 1000px; }
+        .tilt-card { transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+        .tilt-card:hover { transform: rotateX(4deg) rotateY(-4deg) scale(1.02); }
+        .glow-text { text-shadow: 0 0 20px rgba(60, 215, 255, 0.4); }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #0e141a; }
+        ::-webkit-scrollbar-thumb { background: #2f353c; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #3cd7ff; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background selection:bg-primary/30" data-mode="connect">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#0e141a]/80 backdrop-blur-xl shadow-[0_0_40px_rgba(60,215,255,0.06)]">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-screen-2xl mx-auto">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#3cd7ff]" data-icon="terminal">terminal</span>
+<span class="text-2xl font-serif italic text-[#3cd7ff] tracking-tight">Ganesh Chavan</span>
+</div>
+<nav class="hidden md:flex items-center gap-8 font-label text-sm tracking-widest uppercase">
+<a class="text-[#3cd7ff] border-b-2 border-[#3cd7ff] pb-1 font-bold" href="#">Architecture</a>
+<a class="text-[#c5c6cd] hover:text-[#3cd7ff] transition-colors" href="#">Tech Stack</a>
+<a class="text-[#c5c6cd] hover:text-[#3cd7ff] transition-colors" href="#">Experience</a>
+<a class="text-[#c5c6cd] hover:text-[#3cd7ff] transition-colors" href="#">Contact</a>
+</nav>
+<button class="p-2 hover:bg-[#3cd7ff]/10 rounded-full transition-all">
+<span class="material-symbols-outlined text-[#3cd7ff]" data-icon="mail">mail</span>
+</button>
+</div>
+</header>
+<main class="pt-24 pb-32">
+<!-- Hero Section -->
+<section class="relative px-6 py-20 lg:py-32 overflow-hidden">
+<div class="absolute top-0 right-0 -z-10 w-[600px] h-[600px] bg-primary/5 blur-[120px] rounded-full"></div>
+<div class="max-w-screen-xl mx-auto flex flex-col items-center text-center">
+<div class="mb-6 inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-surface-container-high border border-primary/20">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-tertiary"></span>
+</span>
+<span class="font-label text-[10px] uppercase tracking-[0.2em] text-on-surface-variant">Available for Architecture Consulting</span>
+</div>
+<h1 class="font-headline text-5xl md:text-7xl lg:text-8xl font-extrabold mb-6 tracking-tight max-w-4xl italic">
+                    Hi, I'm <span class="text-primary glow-text">Ganesh Chavan</span> 👋
+                </h1>
+<p class="font-body text-xl md:text-2xl text-on-surface-variant max-w-2xl mb-12">
+                    Chief Technology Officer · AI, Cloud &amp; E-Commerce Architect. Building high-performance digital ecosystems that scale to millions.
+                </p>
+<div class="flex flex-wrap justify-center gap-6">
+<button class="px-8 py-4 bg-primary text-on-primary font-bold rounded-lg shadow-[0_0_20px_rgba(60,215,255,0.3)] hover:scale-105 transition-all">
+                        View Projects
+                    </button>
+<button class="px-8 py-4 glass-panel text-primary font-bold rounded-lg hover:bg-primary/10 transition-all flex items-center gap-2">
+<span class="material-symbols-outlined" data-icon="download">download</span> Resume
+                    </button>
+</div>
+</div>
+</section>
+<!-- Glassmorphic Stats -->
+<section class="px-6 py-12 max-w-screen-xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 perspective-container">
+<div class="tilt-card glass-panel p-8 rounded-2xl flex flex-col items-center text-center">
+<span class="font-label text-primary text-4xl font-bold mb-2">18+</span>
+<span class="font-headline text-lg italic text-secondary">Years Experience</span>
+<p class="text-on-surface-variant text-sm mt-2">Crafting Enterprise Software Since 2005</p>
+</div>
+<div class="tilt-card glass-panel p-8 rounded-2xl flex flex-col items-center text-center">
+<span class="font-label text-primary text-4xl font-bold mb-2">€30M</span>
+<span class="font-headline text-lg italic text-secondary">Peak Revenue</span>
+<p class="text-on-surface-variant text-sm mt-2">Managing Systems at Global Scale</p>
+</div>
+<div class="tilt-card glass-panel p-8 rounded-2xl flex flex-col items-center text-center">
+<span class="font-label text-primary text-4xl font-bold mb-2">€25.6M</span>
+<span class="font-headline text-lg italic text-secondary">Profit Built</span>
+<p class="text-on-surface-variant text-sm mt-2">Direct Impact on Business Growth</p>
+</div>
+</div>
+</section>
+<!-- Interactive Tech Stack -->
+<section class="px-6 py-20 max-w-screen-xl mx-auto">
+<div class="flex flex-col md:flex-row gap-16 items-center">
+<div class="w-full md:w-1/2">
+<h2 class="font-headline text-4xl md:text-5xl italic mb-6">Mastered <span class="text-primary">Tech Stack</span></h2>
+<p class="text-on-surface-variant mb-8 text-lg">My engineering philosophy centers on the .NET ecosystem, cloud-native scalability with Azure/AKS, and cutting-edge AI integration.</p>
+<div class="flex flex-wrap gap-3">
+<span class="px-4 py-2 bg-surface-container-highest rounded-full font-label text-xs uppercase tracking-wider">.NET 9</span>
+<span class="px-4 py-2 bg-surface-container-highest rounded-full font-label text-xs uppercase tracking-wider">Azure (AKS)</span>
+<span class="px-4 py-2 bg-surface-container-highest rounded-full font-label text-xs uppercase tracking-wider">Kubernetes</span>
+<span class="px-4 py-2 bg-surface-container-highest rounded-full font-label text-xs uppercase tracking-wider">RAG / AI</span>
+<span class="px-4 py-2 bg-surface-container-highest rounded-full font-label text-xs uppercase tracking-wider">TypeSense</span>
+<span class="px-4 py-2 bg-surface-container-highest rounded-full font-label text-xs uppercase tracking-wider">C#</span>
+<span class="px-4 py-2 bg-surface-container-highest rounded-full font-label text-xs uppercase tracking-wider">PostgreSQL</span>
+</div>
+</div>
+<div class="w-full md:w-1/2 grid grid-cols-3 gap-4">
+<!-- Tech Grid Mockup -->
+<div class="aspect-square glass-panel rounded-xl flex items-center justify-center hover:bg-primary/20 transition-all cursor-default">
+<span class="material-symbols-outlined text-4xl text-primary" data-icon="hub">hub</span>
+</div>
+<div class="aspect-square glass-panel rounded-xl flex items-center justify-center hover:bg-primary/20 transition-all cursor-default">
+<span class="material-symbols-outlined text-4xl text-primary" data-icon="cloud">cloud</span>
+</div>
+<div class="aspect-square glass-panel rounded-xl flex items-center justify-center hover:bg-primary/20 transition-all cursor-default">
+<span class="material-symbols-outlined text-4xl text-primary" data-icon="psychology">psychology</span>
+</div>
+<div class="aspect-square glass-panel rounded-xl flex items-center justify-center hover:bg-primary/20 transition-all cursor-default">
+<span class="material-symbols-outlined text-4xl text-primary" data-icon="dataset">dataset</span>
+</div>
+<div class="aspect-square glass-panel rounded-xl flex items-center justify-center hover:bg-primary/20 transition-all cursor-default">
+<span class="material-symbols-outlined text-4xl text-primary" data-icon="architecture">architecture</span>
+</div>
+<div class="aspect-square glass-panel rounded-xl flex items-center justify-center hover:bg-primary/20 transition-all cursor-default">
+<span class="material-symbols-outlined text-4xl text-primary" data-icon="terminal">terminal</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Core Domains -->
+<section class="px-6 py-20 bg-surface-container-lowest">
+<div class="max-w-screen-xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-0 border border-outline-variant/20 rounded-3xl overflow-hidden">
+<div class="p-12 border-b lg:border-b-0 lg:border-r border-outline-variant/20 group hover:bg-primary/5 transition-all">
+<span class="material-symbols-outlined text-5xl text-primary mb-8" data-icon="search_insights">search_insights</span>
+<h3 class="font-headline text-3xl mb-4 italic">AI &amp; Search</h3>
+<p class="text-on-surface-variant">Implementing RAG pipelines and vector search with TypeSense for ultra-fast, intelligent content discovery.</p>
+</div>
+<div class="p-12 border-b lg:border-b-0 lg:border-r border-outline-variant/20 group hover:bg-primary/5 transition-all">
+<span class="material-symbols-outlined text-5xl text-primary mb-8" data-icon="cloud_done">cloud_done</span>
+<h3 class="font-headline text-3xl mb-4 italic">Cloud Platforms</h3>
+<p class="text-on-surface-variant">Architecting scalable Azure Kubernetes Service (AKS) environments for enterprise reliability.</p>
+</div>
+<div class="p-12 group hover:bg-primary/5 transition-all">
+<span class="material-symbols-outlined text-5xl text-primary mb-8" data-icon="shopping_cart">shopping_cart</span>
+<h3 class="font-headline text-3xl mb-4 italic">E-Commerce</h3>
+<p class="text-on-surface-variant">High-volume transactional systems supporting multi-million euro revenue streams.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Career Story (3D Timeline) -->
+<section class="px-6 py-24 max-w-screen-xl mx-auto">
+<h2 class="font-headline text-4xl md:text-5xl italic mb-16 text-center">Career <span class="text-primary">Odyssey</span></h2>
+<div class="relative">
+<!-- Timeline Line -->
+<div class="absolute left-1/2 -translate-x-1/2 h-full w-px bg-gradient-to-b from-primary/50 via-primary/20 to-transparent"></div>
+<!-- Timeline Item 1 -->
+<div class="relative mb-24 flex items-center justify-between w-full group">
+<div class="w-full md:w-[45%] text-right pr-8 md:pr-12">
+<span class="font-label text-primary text-sm tracking-widest uppercase mb-2 block">2023 — Present</span>
+<h4 class="font-headline text-2xl italic mb-2">CTO @ Movic</h4>
+<p class="text-on-surface-variant">Leading technological strategy and high-performance engineering teams.</p>
+</div>
+<div class="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-primary shadow-[0_0_15px_#3cd7ff]"></div>
+<div class="hidden md:block w-[45%]"></div>
+</div>
+<!-- Timeline Item 2 -->
+<div class="relative mb-24 flex items-center justify-between w-full group">
+<div class="hidden md:block w-[45%]"></div>
+<div class="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-surface-variant border-2 border-primary"></div>
+<div class="w-full md:w-[45%] pl-8 md:pl-12">
+<span class="font-label text-primary text-sm tracking-widest uppercase mb-2 block">2021 — 2023</span>
+<h4 class="font-headline text-2xl italic mb-2">Lead Architect</h4>
+<p class="text-on-surface-variant">Spearheaded the migration to microservices and cloud-native architecture.</p>
+</div>
+</div>
+<!-- Timeline Item 3 -->
+<div class="relative mb-8 flex items-center justify-between w-full group">
+<div class="w-full md:w-[45%] text-right pr-8 md:pr-12">
+<span class="font-label text-primary text-sm tracking-widest uppercase mb-2 block">2014 — 2021</span>
+<h4 class="font-headline text-2xl italic mb-2">Software Architect</h4>
+<p class="text-on-surface-variant">Built the foundations of high-traffic e-commerce engines.</p>
+</div>
+<div class="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-surface-variant border-2 border-primary"></div>
+<div class="hidden md:block w-[45%]"></div>
+</div>
+</div>
+</section>
+<!-- Featured Project -->
+<section class="px-6 py-20 max-w-screen-xl mx-auto">
+<div class="bg-surface-container-low rounded-3xl p-8 md:p-16 relative overflow-hidden flex flex-col lg:flex-row gap-12 items-center">
+<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary to-transparent"></div>
+<div class="w-full lg:w-1/2">
+<span class="font-label text-tertiary text-xs uppercase tracking-[0.3em] mb-4 block">Signature Work</span>
+<h2 class="font-headline text-4xl md:text-5xl italic mb-6">Enterprise Order  & Tickets Management System</h2>
+<p class="text-on-surface-variant text-lg mb-8">
+                        A high-performance, cloud-native .NET backend API powering real-time ticket commerce
+                    </p>
+<div class="flex flex-wrap gap-2 mb-8">
+<span class="px-3 py-1 bg-primary/10 text-primary border border-primary/20 rounded text-[10px] font-label font-bold uppercase">CQRS</span>
+<span class="px-3 py-1 bg-primary/10 text-primary border border-primary/20 rounded text-[10px] font-label font-bold uppercase">MediatR</span>
+<span class="px-3 py-1 bg-primary/10 text-primary border border-primary/20 rounded text-[10px] font-label font-bold uppercase">AKS</span>
+<span class="px-3 py-1 bg-primary/10 text-primary border border-primary/20 rounded text-[10px] font-label font-bold uppercase">Domain Driven</span>
+</div>
+<a class="inline-flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all" href="#">
+                        Case Study <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<div class="w-full lg:w-1/2">
+<div class="aspect-video bg-surface-container-highest rounded-2xl overflow-hidden shadow-2xl relative">
+<div class="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent"></div>
+<img alt="Server infrastructure" class="w-full h-full object-cover mix-blend-overlay" data-alt="Abstract view of modern server infrastructure and blue lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnGIbzUFD43FmV0gK_sqcyz3jZRFhCIIN95M9rs_HmKwj23334VRcK82tZTlFnD6YJMRVGWwNWko758L3RmAXMxS6uPBEmNdrlJXH4RclkGXQ1n6cp0KaRAhPzc--ysC4H4Zd28w9v1JFCsGnJCKGs0sBUnbROKlOQTk398W602sIrql7aGfrRiQ16zAf0QnZDkGwcnrisvxIqz1aEK6B4x_yyyuC1ANZsC2696HnoD0o6DRku6UqGzhzGLDyYJ0wDg_FFJ1MICwg"/>
+<div class="absolute bottom-6 left-6 right-6 p-4 glass-panel rounded-xl">
+<div class="flex items-center gap-3">
+<div class="w-2 h-2 rounded-full bg-tertiary"></div>
+<span class="text-xs font-label">Real-time Node Monitoring Active</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact & Links -->
+<section class="px-6 py-20 max-w-screen-xl mx-auto text-center">
+<h2 class="font-headline text-4xl italic mb-12">Let's Build the <span class="text-primary">Future</span></h2>
+<div class="flex flex-wrap justify-center gap-4">
+<a class="flex items-center gap-3 px-6 py-4 glass-panel rounded-xl hover:bg-primary/10 transition-all" href="#">
+<span class="material-symbols-outlined text-primary" data-icon="alternate_email">alternate_email</span>
+<span class="font-label uppercase text-sm tracking-widest">Email Me</span>
+</a>
+<a class="flex items-center gap-3 px-6 py-4 glass-panel rounded-xl hover:bg-primary/10 transition-all" href="#">
+<span class="material-symbols-outlined text-primary" data-icon="share">share</span>
+<span class="font-label uppercase text-sm tracking-widest">LinkedIn</span>
+</a>
+<div class="flex items-center gap-3 px-6 py-4 glass-panel rounded-xl">
+<span class="material-symbols-outlined text-primary" data-icon="location_on">location_on</span>
+<span class="font-label uppercase text-sm tracking-widest">Utrecht, NL</span>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-8 z-50 bg-[#0e141a]/90 backdrop-blur-2xl px-6 py-3 rounded-full border border-[#3cd7ff]/15 shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
+<a class="flex items-center justify-center bg-[#3cd7ff] text-[#0e141a] rounded-full p-3 shadow-[0_0_20px_rgba(60,215,255,0.4)] transition-all scale-110" href="#">
+<span class="material-symbols-outlined" data-icon="home" style="font-variation-settings: 'FILL' 1;">home</span>
+</a>
+<a class="flex items-center justify-center text-[#c5c6cd] p-3 hover:text-[#3cd7ff] transition-transform hover:scale-110" href="#">
+<span class="material-symbols-outlined" data-icon="query_stats">query_stats</span>
+</a>
+<a class="flex items-center justify-center text-[#c5c6cd] p-3 hover:text-[#3cd7ff] transition-transform hover:scale-110" href="#">
+<span class="material-symbols-outlined" data-icon="layers">layers</span>
+</a>
+<a class="flex items-center justify-center text-[#c5c6cd] p-3 hover:text-[#3cd7ff] transition-transform hover:scale-110" href="#">
+<span class="material-symbols-outlined" data-icon="timeline">timeline</span>
+</a>
+<a class="flex items-center justify-center text-[#c5c6cd] p-3 hover:text-[#3cd7ff] transition-transform hover:scale-110" href="#">
+<span class="material-symbols-outlined" data-icon="contact_mail">contact_mail</span>
+</a>
+</nav>
+</body></html>
